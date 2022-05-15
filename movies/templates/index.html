@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Recommended -->
+<section class="bg-dark pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <a href="#" class="card card-big text-light">
+                    <img src="{% static 'img/godfather2.jpeg' %}" class="card-img-top mh-25" alt="Recommended movie poster">
+                    <div class="card-body">
+                        <h5 class="card-title">Filmy wszech czasów</h5>
+                        <p class="card-text">Kto nie widział klasyki, którą jest <b>"Ojciec Chrzestny"</b>?!</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-sm-6">
+                <a class="card text-light mb-4">
+                    <div class="row g-0">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <h5 class="card-title">Najgorsze filmy</h5>
+                                <p class="card-text"> Niektóre filmy mimo zaangażowania twórców nie otrzymują
+                                    najlepszych opinii.
+                                    Co tak naprawdę sprawia, że uważamy film za niegodny uwagi?</p>
+                                <p class="card-text"><small class="text-muted">Aktualizowany 3 minuty temu</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="card text-light mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <h5 class="card-title">Co oglądać w zimowe wieczory?</h5>
+                                <p class="card-text">Nadeszły chłodne wieczory, a nawet popołudnia. Co można oglądać by
+                                    nie nadchodzące dni nie były nudne?
+                                    A ciepła herbata smakowała lepiej?</p>
+                                <p class="card-text"><small class="text-muted">Aktualizowany 10.01.2021</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add movie -->
+<section class="bg-primary h-20 text-center">
+    <a class="w-100 btn btn-primary" href="./form.html">Dodaj film</a>
+</section>
+
+<!-- Reviews -->
+<section class="bg-light">
+
+    <div class="container">
+        <div class="row justify-content-center pt-3">
+
+            <header>
+                <h4 class="text-center">RECENZJE</h4>
+            </header>
+
+            <div class="col-12 align-items-center">
+
+                <!-- Tablist -->
+                <ul class="nav nav-pills mb-3 justify-content-center" id="reviewsPills" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="pills-recommended-tab" data-toggle="pill"
+                            href="#pills-recommended" role="tab" aria-controls="pills-recommended"
+                            aria-selected="true">Polecane</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link mx-3" id="pills-ratings-tab" data-toggle="pill" href="#pills-ratings"
+                            role="tab" aria-controls="pills-ratings" aria-selected="false">Najwyżej oceniane</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-favourite-tab" data-toggle="pill" href="#pills-favourite"
+                            role="tab" aria-controls="pills-favourite" aria-selected="false">Ulubione</a>
+                    </li>
+                </ul>
+
+                <!-- Tabpanel -->
+                <div class="tab-content" id="reviewsPillsContent">
+                    <div class="tab-pane fade show active" id="pills-recommended" role="tabpanel"
+                        aria-labelledby="pills-recommended-tab">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <a href="#" class="card text-dark">
+                                    <img src="{% static './img/dragon.jpeg' %}" class="card-img-top" alt="Recommended movie poster">
+
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tytuł filmu polecanego 1</h5>
+                                        <p class="card-text">
+                                            Kolejna produkcja DreamWorks tym razem z magicznymi istotami, jakimi są
+                                            smoki, w tle.
+                                            Wojownicy i smoki? Przepis na świetny film.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6">
+                                <a href="#" class="card text-dark">
+                                    <img src="{% static './img/knives_out.jpeg' %}" class="card-img-top"
+                                        alt="Recommended movie poster">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tytuł filmu polecanego 2</h5>
+                                        <p class="card-text">
+                                            Kto zabił? Kto jest podejrzany?
+                                            Detektyw ma niemałą zagadkę podczas przeprowadzania śledztwa!
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <a href="#" class="btn btn-outline-dark ml-auto mr-auto my-3">Zobacz więcej</a>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-ratings" role="tabpanel" aria-labelledby="pills-ratings-tab">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <a href="#" class="card text-dark">
+                                    <img src="{% static './img/dragon.jpeg' %}" class="card-img-top" alt="Recommended movie poster">
+
+                                    <div class="card-body">
+                                        <h5 class="card-title">Film nr 1</h5>
+                                        <p class="card-text">
+                                            Tutaj pojawi się opis filmu, który według ocen zajął 1 miejsce w rankingu.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6">
+                                <a href="#" class="card text-dark">
+                                    <img src="{% static './img/dragon.jpeg' %}" class="card-img-top" alt="Recommended movie poster">
+
+                                    <div class="card-body">
+                                        <h5 class="card-title">Film nr 2</h5>
+                                        <p class="card-text">
+                                            Tutaj pojawi się opis filmu, który według ocen zajął 2 miejsce w rankingu.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <a href="#" class="btn btn-outline-dark ml-auto mr-auto my-3">Zobacz więcej</a>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-favourite" role="tabpanel"
+                        aria-labelledby="pills-favourite-tab">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <a href="#" class="card text-dark">
+                                    <img src="{% static './img/dragon.jpeg' %}" class="card-img-top" alt="Recommended movie poster">
+
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ulubiony film użytkowników</h5>
+                                        <p class="card-text">
+                                            Tutaj pojawi się opis filmu, który według ocen użytkowników zajął 1 miejsce
+                                            w rankingu.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6">
+                                <a href="#" class="card text-dark">
+                                    <img src="./img/dragon.jpeg" class="card-img-top" alt="Recommended movie poster">
+
+                                    <div class="card-body">
+                                        <h5 class="card-title">Drugi ulubiony film użytkowników</h5>
+                                        <p class="card-text">
+                                            Tutaj pojawi się opis filmu, który według ocen użytkowników zajął 2 miejsce
+                                            w rankingu.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <a href="#" class="btn btn-outline-dark ml-auto mr-auto my-3">Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

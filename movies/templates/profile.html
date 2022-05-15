@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="card card-body">
+        <h2>Witaj {{ user }}!</h2>
+        <p>Twoje ostatnie logowanie: {{ user.last_login }}</p>
+        <p>Data dołączenia: {{ user.date_joined }}</p>
+    </div>
+</div>
+
+{% endblock %}

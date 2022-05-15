@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<p>testowa lista filmów</p>
+
+<ul>
+{% for movie in movies %}
+<li>{{ movie.title }}</li>
+{% endfor %}
+</ul>
+<p>Wygenerowano: {{ date }}</p>
+{% endblock content %}
